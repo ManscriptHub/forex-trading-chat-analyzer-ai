@@ -1,0 +1,6 @@
+{
+  "name": "Forex Trading Chat Analyzer",
+  "description": "A serious, transparent forex setup analyzer with 8-factor objective scoring, strict NO-TRADE discipline, modular market data architecture, walk-forward backtesting, and trade journal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
