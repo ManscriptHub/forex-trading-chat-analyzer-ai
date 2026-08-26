@@ -1,7 +1,7 @@
 import React from 'react';
-import { Activity, BookOpen, BarChart3, Sliders, Database, MessageSquare } from 'lucide-react';
+import { Activity, BookOpen, BarChart3, Sliders, Database, MessageSquare, Sparkles } from 'lucide-react';
 
-export type ActiveTab = 'analyzer' | 'journal' | 'backtest' | 'calibration' | 'market_data' | 'chat';
+export type ActiveTab = 'analyzer' | 'journal' | 'backtest' | 'factor_audit' | 'calibration' | 'market_data' | 'chat';
 
 interface NavigationProps {
   activeTab: ActiveTab;
@@ -22,8 +22,9 @@ export const Navigation: React.FC<NavigationProps> = ({
     { id: 'analyzer' as ActiveTab, label: 'Analyzer', icon: Activity },
     { id: 'chat' as ActiveTab, label: 'Chat Parser', icon: MessageSquare },
     { id: 'backtest' as ActiveTab, label: 'Backtest', icon: BarChart3 },
-    { id: 'journal' as ActiveTab, label: 'Journal', icon: BookOpen, count: journalCount },
+    { id: 'factor_audit' as ActiveTab, label: 'Factor Audit', icon: Sparkles },
     { id: 'calibration' as ActiveTab, label: 'Calibration', icon: Sliders },
+    { id: 'journal' as ActiveTab, label: 'Journal', icon: BookOpen, count: journalCount },
     { id: 'market_data' as ActiveTab, label: 'Data', icon: Database },
   ];
 

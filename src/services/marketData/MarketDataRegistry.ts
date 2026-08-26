@@ -1,10 +1,20 @@
-import { Candle, MarketDataAdapter, MarketDataResult, Timeframe } from '../../types/market';
+import {
+  Candle,
+  CandleValidationReport,
+  DatasetKind,
+  MarketDataAdapter,
+  MarketDataResult,
+  Timeframe,
+} from '../../types/market';
 import { generateHistoricalSeries } from './historicalDataGenerator';
+import { CandleDataValidator } from './CandleDataValidator';
 
 export class HistoricalDatasetProvider implements MarketDataAdapter {
   id = 'historical_curated';
-  name = 'Curated Historical Datasets';
-  description = 'High-fidelity multi-timeframe historical price records for backtesting and setup audits.';
+  name = 'Synthetic Benchmark Dataset (Dev/Test)';
+  datasetKind: DatasetKind = 'SYNTHETIC_BENCHMARK';
+  description =
+    'Deterministic multi-regime synthetic price series for indicator calibration and test workflows. Not real market data; no live predictive edge claimed.';
 
   private pairs = [
     'EUR/USD',
@@ -41,9 +51,10 @@ export class HistoricalDatasetProvider implements MarketDataAdapter {
         data: [],
         status: 'DATA_UNAVAILABLE',
         source: this.name,
+        datasetKind: this.datasetKind,
         pair,
         timeframe,
-        message: `No curated historical data found for pair ${pair}. Switch provider or import custom OHLC candles.`,
+        message: `No synthetic benchmark series found for pair ${pair}. Switch provider or import real custom broker CSV candles.`,
       };
     }
 
@@ -59,7 +70,8 @@ export class HistoricalDatasetProvider implements MarketDataAdapter {
     return {
       data: sliced,
       status: 'AVAILABLE',
-      source: this.name,
+      source: `${this.name} (${sliced.length} bars)`,
+      datasetKind: this.datasetKind,
       pair: standardPair,
       timeframe,
       lastUpdated: sliced[sliced.length - 1]?.timestamp,
@@ -69,10 +81,13 @@ export class HistoricalDatasetProvider implements MarketDataAdapter {
 
 export class CustomImportProvider implements MarketDataAdapter {
   id = 'custom_import';
-  name = 'Custom Broker / CSV Import';
-  description = 'User-imported candle files (TradingView, MetaTrader 4/5, cTrader, CSV/JSON).';
+  name = 'Real Historical CSV / Broker Import';
+  datasetKind: DatasetKind = 'REAL_HISTORICAL_IMPORT';
+  description =
+    'Real historical candle records imported from MT4, MT5, cTrader, or TradingView, validated with strict integrity checks.';
 
   private storage: Map<string, Candle[]> = new Map();
+  private reports: Map<string, CandleValidationReport> = new Map();
 
   getAvailablePairs(): string[] {
     const pairs = new Set<string>();
@@ -92,43 +107,62 @@ export class CustomImportProvider implements MarketDataAdapter {
     return Array.from(tfs);
   }
 
-  importCustomData(pair: string, timeframe: string, candles: Candle[]): void {
+  importCustomData(pair: string, timeframe: string, candles: Candle[], report?: CandleValidationReport): void {
     const key = `${pair.toUpperCase()}__${timeframe.toUpperCase()}`;
-    // Sort chronologically
     const sorted = [...candles].sort((a, b) => a.timestamp - b.timestamp);
     this.storage.set(key, sorted);
+    if (report) {
+      this.reports.set(key, report);
+    }
   }
 
-  async getCandles(pair: string, timeframe: string, limit = 300): Promise<MarketDataResult> {
+  getValidationReport(pair: string, timeframe: string): CandleValidationReport | undefined {
+    const key = `${pair.toUpperCase()}__${timeframe.toUpperCase()}`;
+    return this.reports.get(key);
+  }
+
+  getAllCandles(pair: string, timeframe: string): Candle[] {
+    const key = `${pair.toUpperCase()}__${timeframe.toUpperCase()}`;
+    return this.storage.get(key) || [];
+  }
+
+  async getCandles(pair: string, timeframe: string, limit?: number): Promise<MarketDataResult> {
     const key = `${pair.toUpperCase()}__${timeframe.toUpperCase()}`;
     const candles = this.storage.get(key);
+    const report = this.reports.get(key);
 
     if (!candles || candles.length === 0) {
       return {
         data: [],
         status: 'DATA_UNAVAILABLE',
         source: this.name,
+        datasetKind: this.datasetKind,
         pair,
         timeframe,
-        message: `No custom data imported for ${pair} on ${timeframe}. Please upload a CSV/JSON file in the Market Data tab.`,
+        message: `No imported historical candle data for ${pair} on ${timeframe}. Please import a CSV or JSON file in the Market Data tab.`,
+        validationReport: report,
       };
     }
 
+    const sliced = limit && limit > 0 ? candles.slice(-limit) : candles;
     return {
-      data: candles.slice(-limit),
+      data: sliced,
       status: 'AVAILABLE',
-      source: `${this.name} (${candles.length} bars)`,
+      source: `${this.name} (${candles.length} total bars validated)`,
+      datasetKind: this.datasetKind,
       pair,
       timeframe,
       lastUpdated: candles[candles.length - 1]?.timestamp,
+      validationReport: report,
     };
   }
 }
 
 export class FreePublicApiProvider implements MarketDataAdapter {
   id = 'free_public_api';
-  name = 'Public Market Feed (Free/Direct)';
-  description = 'Direct rate-limited public forex quotes. Flags UNAVAILABLE when offline or pair is unlisted.';
+  name = 'Public Market Feed (Rate-Limited)';
+  datasetKind: DatasetKind = 'PUBLIC_API_FEED';
+  description = 'Direct rate-limited market feed. Returns transparent DATA_UNAVAILABLE when endpoint is offline.';
 
   getAvailablePairs(): string[] {
     return ['EUR/USD', 'GBP/USD', 'USD/JPY', 'AUD/USD', 'USD/CAD', 'USD/CHF'];
@@ -139,28 +173,15 @@ export class FreePublicApiProvider implements MarketDataAdapter {
   }
 
   async getCandles(pair: string, timeframe: string): Promise<MarketDataResult> {
-    // Transparently check or declare status
-    try {
-      // In web sandbox / client-side without paid broker API key, we do NOT fake live ticks.
-      // Instead we return transparent notice:
-      return {
-        data: [],
-        status: 'DATA_UNAVAILABLE',
-        source: this.name,
-        pair,
-        timeframe,
-        message: 'Live market API endpoint is currently disconnected. Use Curated Historical Data or Custom CSV Import for zero-bias backtesting.',
-      };
-    } catch {
-      return {
-        data: [],
-        status: 'DATA_UNAVAILABLE',
-        source: this.name,
-        pair,
-        timeframe,
-        message: 'Network connection to public feed failed. Data marked UNAVAILABLE.',
-      };
-    }
+    return {
+      data: [],
+      status: 'DATA_UNAVAILABLE',
+      source: this.name,
+      datasetKind: this.datasetKind,
+      pair,
+      timeframe,
+      message: 'Live market API endpoint is currently offline. Use Real Historical CSV Import or Synthetic Benchmark for zero-lookahead backtesting.',
+    };
   }
 }
 

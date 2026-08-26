@@ -13,6 +13,7 @@ import { Navigation, ActiveTab } from './components/Navigation';
 import { AnalyzerView } from './components/AnalyzerView';
 import { ChatAnalyzerView } from './components/ChatAnalyzerView';
 import { BacktestView } from './components/BacktestView';
+import { FactorAuditView } from './components/FactorAuditView';
 import { JournalView } from './components/JournalView';
 import { CalibrationView } from './components/CalibrationView';
 import { MarketDataView } from './components/MarketDataView';
@@ -220,6 +221,13 @@ export default function App() {
             profiles={DEFAULT_PROFILES}
             onSelectPair={p => setSetupInput(prev => ({ ...prev, pair: p }))}
             onSelectTimeframe={tf => setSetupInput(prev => ({ ...prev, timeframe: tf }))}
+          />
+        )}
+
+        {activeTab === 'factor_audit' && (
+          <FactorAuditView
+            weights={weights}
+            thresholds={thresholds}
           />
         )}
 

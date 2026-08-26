@@ -175,14 +175,16 @@ export function computeIndicatorSnapshot(candles: Candle[]): IndicatorSnapshot {
     };
   }
 
-  const closes = candles.map(c => c.close);
+  // Bound lookback to 350 bars for instantaneous O(1) performance per step while fully stabilizing 200 EMA
+  const activeCandles = candles.length > 350 ? candles.slice(-350) : candles;
+  const closes = activeCandles.map(c => c.close);
   const ema20 = calculateEMA(closes, 20);
   const ema50 = calculateEMA(closes, 50);
   const ema200 = calculateEMA(closes, 200);
   const rsi14 = calculateRSI(closes, 14);
-  const atr14 = calculateATR(candles, 14);
+  const atr14 = calculateATR(activeCandles, 14);
 
-  const { swingHighs, swingLows } = findSwingPoints(candles, 3);
+  const { swingHighs, swingLows } = findSwingPoints(activeCandles, 3);
 
   // Group swing points into S/R clusters
   const lastPrice = closes[closes.length - 1];
@@ -200,12 +202,12 @@ export function computeIndicatorSnapshot(candles: Candle[]): IndicatorSnapshot {
 
   // Liquidity sweeps in last 20 candles
   const recentLiquiditySweeps: { index: number; type: 'HIGH_SWEEP' | 'LOW_SWEEP'; price: number; timestamp: number }[] = [];
-  const startCheck = Math.max(0, candles.length - 20);
+  const startCheck = Math.max(0, activeCandles.length - 20);
 
-  for (let i = startCheck; i < candles.length; i++) {
-    const c = candles[i];
-    const prevHighs = candles.slice(Math.max(0, i - 15), i).map(x => x.high);
-    const prevLows = candles.slice(Math.max(0, i - 15), i).map(x => x.low);
+  for (let i = startCheck; i < activeCandles.length; i++) {
+    const c = activeCandles[i];
+    const prevHighs = activeCandles.slice(Math.max(0, i - 15), i).map(x => x.high);
+    const prevLows = activeCandles.slice(Math.max(0, i - 15), i).map(x => x.low);
 
     if (prevHighs.length > 5) {
       const highestPrior = Math.max(...prevHighs);

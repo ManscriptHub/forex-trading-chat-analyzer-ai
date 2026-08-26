@@ -52,11 +52,12 @@ export function evaluateFactors(
 
   const lastIndex = candles.length - 1;
   const lastClose = candles.length > 0 ? candles[lastIndex].close : input.entryPrice;
-  const ema20 = indicators.ema20[lastIndex] ?? lastClose;
-  const ema50 = indicators.ema50[lastIndex] ?? lastClose;
-  const ema200 = indicators.ema200[lastIndex] ?? lastClose;
-  const rsi = indicators.rsi14[lastIndex] ?? 50;
-  const atr = indicators.atr14[lastIndex] ?? (pipScale * 20);
+  const lastIndIdx = indicators.ema20.length - 1;
+  const ema20 = indicators.ema20[lastIndIdx] ?? lastClose;
+  const ema50 = indicators.ema50[lastIndIdx] ?? lastClose;
+  const ema200 = indicators.ema200[lastIndIdx] ?? lastClose;
+  const rsi = indicators.rsi14[lastIndIdx] ?? 50;
+  const atr = indicators.atr14[lastIndIdx] ?? (pipScale * 20);
   const atrPips = Number((atr / pipScale).toFixed(1));
 
   // -------------------------------------------------------------

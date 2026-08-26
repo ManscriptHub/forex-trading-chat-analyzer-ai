@@ -1,0 +1,2980 @@
+{
+  "generatedAt": 1787755402062,
+  "partitionUsed": "TRAIN",
+  "totalTrades": 1317,
+  "totalCandles": 34531,
+  "factorReports": [
+    {
+      "factorKey": "trend",
+      "factorName": "Trend Alignment (EMA Stack)",
+      "defaultWeight": 15,
+      "totalEvaluatedTrades": 1317,
+      "scoreDistribution": {
+        "mean": 85.9,
+        "stdDev": 20.7,
+        "median": 100,
+        "min": 40,
+        "max": 100,
+        "p25": 70,
+        "p75": 100
+      },
+      "buckets": [
+        {
+          "bucketRange": "0 – 20",
+          "minScore": 0,
+          "maxScore": 20,
+          "tradesCount": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakevens": 0,
+          "winRate": 0,
+          "lossRate": 0,
+          "netR": 0,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 0,
+          "averageHoldingBars": 0
+        },
+        {
+          "bucketRange": "21 – 40",
+          "minScore": 20.01,
+          "maxScore": 40,
+          "tradesCount": 150,
+          "wins": 63,
+          "losses": 66,
+          "breakevens": 21,
+          "winRate": 42,
+          "lossRate": 44,
+          "netR": 13.82,
+          "averageR": 0.09,
+          "expectancy": 0.09,
+          "profitFactor": 1.24,
+          "averageHoldingBars": 23.5
+        },
+        {
+          "bucketRange": "41 – 60",
+          "minScore": 40.01,
+          "maxScore": 60,
+          "tradesCount": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakevens": 0,
+          "winRate": 0,
+          "lossRate": 0,
+          "netR": 0,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 0,
+          "averageHoldingBars": 0
+        },
+        {
+          "bucketRange": "61 – 80",
+          "minScore": 60.01,
+          "maxScore": 80,
+          "tradesCount": 320,
+          "wins": 101,
+          "losses": 156,
+          "breakevens": 63,
+          "winRate": 31.6,
+          "lossRate": 48.8,
+          "netR": -6.06,
+          "averageR": -0.02,
+          "expectancy": -0.02,
+          "profitFactor": 0.96,
+          "averageHoldingBars": 24.1
+        },
+        {
+          "bucketRange": "81 – 100",
+          "minScore": 80.01,
+          "maxScore": 100,
+          "tradesCount": 847,
+          "wins": 273,
+          "losses": 439,
+          "breakevens": 135,
+          "winRate": 32.2,
+          "lossRate": 51.8,
+          "netR": -37.55,
+          "averageR": -0.04,
+          "expectancy": -0.04,
+          "profitFactor": 0.92,
+          "averageHoldingBars": 23.3
+        }
+      ],
+      "spearmanRho": 0.0394,
+      "pearsonR": -0.0362,
+      "pValue": 0.1532,
+      "tStatistic": 1.428,
+      "isStatisticallySignificant": false,
+      "monotonicity": "MODERATE_POSITIVE",
+      "directionBreakdown": {
+        "long": {
+          "groupName": "BUY (Long)",
+          "tradesCount": 690,
+          "winRate": 32.9,
+          "netR": -4.66,
+          "averageR": -0.01,
+          "expectancy": -0.01,
+          "profitFactor": 0.99,
+          "spearmanRho": -0.005,
+          "pValue": 0.8907
+        },
+        "short": {
+          "groupName": "SELL (Short)",
+          "tradesCount": 627,
+          "winRate": 33.5,
+          "netR": -25.13,
+          "averageR": -0.04,
+          "expectancy": -0.04,
+          "profitFactor": 0.92,
+          "spearmanRho": 0.089,
+          "pValue": 0.0262
+        }
+      },
+      "regimeBreakdown": {
+        "Bearish Trend": {
+          "groupName": "Bearish Trend",
+          "tradesCount": 524,
+          "winRate": 33.4,
+          "netR": -6.46,
+          "averageR": -0.01,
+          "expectancy": -0.01,
+          "profitFactor": 0.97,
+          "spearmanRho": 0.107,
+          "pValue": 0.0138
+        },
+        "Bullish Trend": {
+          "groupName": "Bullish Trend",
+          "tradesCount": 450,
+          "winRate": 30.7,
+          "netR": -37.12,
+          "averageR": -0.08,
+          "expectancy": -0.08,
+          "profitFactor": 0.84,
+          "spearmanRho": 0.132,
+          "pValue": 0.005
+        },
+        "Range / Consolidation": {
+          "groupName": "Range / Consolidation",
+          "tradesCount": 314,
+          "winRate": 36.9,
+          "netR": 12.45,
+          "averageR": 0.04,
+          "expectancy": 0.04,
+          "profitFactor": 1.09,
+          "spearmanRho": 0.017,
+          "pValue": 0.7604
+        },
+        "High Volatility": {
+          "groupName": "High Volatility",
+          "tradesCount": 29,
+          "winRate": 27.6,
+          "netR": 1.34,
+          "averageR": 0.05,
+          "expectancy": 0.05,
+          "profitFactor": 1.22,
+          "spearmanRho": 0.098,
+          "pValue": 0.8778
+        }
+      },
+      "chronologicalStability": [
+        {
+          "groupName": "Train Chunk 1 (0%-25%)",
+          "tradesCount": 330,
+          "winRate": 33.6,
+          "netR": -9.81,
+          "averageR": -0.03,
+          "expectancy": -0.03,
+          "profitFactor": 0.94,
+          "spearmanRho": 0.076,
+          "pValue": 0.1655
+        },
+        {
+          "groupName": "Train Chunk 2 (25%-50%)",
+          "tradesCount": 330,
+          "winRate": 36.1,
+          "netR": 23.1,
+          "averageR": 0.07,
+          "expectancy": 0.07,
+          "profitFactor": 1.16,
+          "spearmanRho": 0.045,
+          "pValue": 0.4156
+        },
+        {
+          "groupName": "Train Chunk 3 (50%-75%)",
+          "tradesCount": 330,
+          "winRate": 28.5,
+          "netR": -42.9,
+          "averageR": -0.13,
+          "expectancy": -0.13,
+          "profitFactor": 0.75,
+          "spearmanRho": 0.028,
+          "pValue": 0.6177
+        },
+        {
+          "groupName": "Train Chunk 4 (75%-100%)",
+          "tradesCount": 327,
+          "winRate": 34.6,
+          "netR": -0.18,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 1,
+          "spearmanRho": 0.042,
+          "pValue": 0.4446
+        }
+      ],
+      "assessmentSummary": "Weak or statistically insignificant correlation (ρ = 0.039, p = 0.1532). Factor scores behave like uncalibrated noise without standalone predictive power.",
+      "predictiveUtility": "NEUTRAL_NOISE"
+    },
+    {
+      "factorKey": "marketStructure",
+      "factorName": "Market Structure & Swings",
+      "defaultWeight": 20,
+      "totalEvaluatedTrades": 1317,
+      "scoreDistribution": {
+        "mean": 75.6,
+        "stdDev": 30.9,
+        "median": 100,
+        "min": 20,
+        "max": 100,
+        "p25": 50,
+        "p75": 100
+      },
+      "buckets": [
+        {
+          "bucketRange": "0 – 20",
+          "minScore": 0,
+          "maxScore": 20,
+          "tradesCount": 108,
+          "wins": 36,
+          "losses": 60,
+          "breakevens": 12,
+          "winRate": 33.3,
+          "lossRate": 55.6,
+          "netR": -0.58,
+          "averageR": -0.01,
+          "expectancy": -0.01,
+          "profitFactor": 0.98,
+          "averageHoldingBars": 21.5
+        },
+        {
+          "bucketRange": "21 – 40",
+          "minScore": 20.01,
+          "maxScore": 40,
+          "tradesCount": 125,
+          "wins": 44,
+          "losses": 69,
+          "breakevens": 12,
+          "winRate": 35.2,
+          "lossRate": 55.2,
+          "netR": -9.01,
+          "averageR": -0.07,
+          "expectancy": -0.07,
+          "profitFactor": 0.84,
+          "averageHoldingBars": 24
+        },
+        {
+          "bucketRange": "41 – 60",
+          "minScore": 40.01,
+          "maxScore": 60,
+          "tradesCount": 294,
+          "wins": 96,
+          "losses": 166,
+          "breakevens": 32,
+          "winRate": 32.7,
+          "lossRate": 56.5,
+          "netR": -17.77,
+          "averageR": -0.06,
+          "expectancy": -0.06,
+          "profitFactor": 0.89,
+          "averageHoldingBars": 20
+        },
+        {
+          "bucketRange": "61 – 80",
+          "minScore": 60.01,
+          "maxScore": 80,
+          "tradesCount": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakevens": 0,
+          "winRate": 0,
+          "lossRate": 0,
+          "netR": 0,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 0,
+          "averageHoldingBars": 0
+        },
+        {
+          "bucketRange": "81 – 100",
+          "minScore": 80.01,
+          "maxScore": 100,
+          "tradesCount": 790,
+          "wins": 261,
+          "losses": 366,
+          "breakevens": 163,
+          "winRate": 33,
+          "lossRate": 46.3,
+          "netR": -2.43,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 1.01,
+          "averageHoldingBars": 25
+        }
+      ],
+      "spearmanRho": 0.1135,
+      "pearsonR": 0.0191,
+      "pValue": 0.0001,
+      "tStatistic": 4.144,
+      "isStatisticallySignificant": true,
+      "monotonicity": "MONOTONIC_POSITIVE",
+      "directionBreakdown": {
+        "long": {
+          "groupName": "BUY (Long)",
+          "tradesCount": 690,
+          "winRate": 32.9,
+          "netR": -4.66,
+          "averageR": -0.01,
+          "expectancy": -0.01,
+          "profitFactor": 0.99,
+          "spearmanRho": 0.084,
+          "pValue": 0.0262
+        },
+        "short": {
+          "groupName": "SELL (Short)",
+          "tradesCount": 627,
+          "winRate": 33.5,
+          "netR": -25.13,
+          "averageR": -0.04,
+          "expectancy": -0.04,
+          "profitFactor": 0.92,
+          "spearmanRho": 0.145,
+          "pValue": 0.0002
+        }
+      },
+      "regimeBreakdown": {
+        "Bearish Trend": {
+          "groupName": "Bearish Trend",
+          "tradesCount": 524,
+          "winRate": 33.4,
+          "netR": -6.46,
+          "averageR": -0.01,
+          "expectancy": -0.01,
+          "profitFactor": 0.97,
+          "spearmanRho": 0.136,
+          "pValue": 0.0016
+        },
+        "Bullish Trend": {
+          "groupName": "Bullish Trend",
+          "tradesCount": 450,
+          "winRate": 30.7,
+          "netR": -37.12,
+          "averageR": -0.08,
+          "expectancy": -0.08,
+          "profitFactor": 0.84,
+          "spearmanRho": 0.092,
+          "pValue": 0.0494
+        },
+        "Range / Consolidation": {
+          "groupName": "Range / Consolidation",
+          "tradesCount": 314,
+          "winRate": 36.9,
+          "netR": 12.45,
+          "averageR": 0.04,
+          "expectancy": 0.04,
+          "profitFactor": 1.09,
+          "spearmanRho": 0.109,
+          "pValue": 0.0532
+        },
+        "High Volatility": {
+          "groupName": "High Volatility",
+          "tradesCount": 29,
+          "winRate": 27.6,
+          "netR": 1.34,
+          "averageR": 0.05,
+          "expectancy": 0.05,
+          "profitFactor": 1.22,
+          "spearmanRho": -0.145,
+          "pValue": 0.7497
+        }
+      },
+      "chronologicalStability": [
+        {
+          "groupName": "Train Chunk 1 (0%-25%)",
+          "tradesCount": 330,
+          "winRate": 33.6,
+          "netR": -9.81,
+          "averageR": -0.03,
+          "expectancy": -0.03,
+          "profitFactor": 0.94,
+          "spearmanRho": 0.083,
+          "pValue": 0.13
+        },
+        {
+          "groupName": "Train Chunk 2 (25%-50%)",
+          "tradesCount": 330,
+          "winRate": 36.1,
+          "netR": 23.1,
+          "averageR": 0.07,
+          "expectancy": 0.07,
+          "profitFactor": 1.16,
+          "spearmanRho": 0.156,
+          "pValue": 0.0043
+        },
+        {
+          "groupName": "Train Chunk 3 (50%-75%)",
+          "tradesCount": 330,
+          "winRate": 28.5,
+          "netR": -42.9,
+          "averageR": -0.13,
+          "expectancy": -0.13,
+          "profitFactor": 0.75,
+          "spearmanRho": 0.056,
+          "pValue": 0.3114
+        },
+        {
+          "groupName": "Train Chunk 4 (75%-100%)",
+          "tradesCount": 327,
+          "winRate": 34.6,
+          "netR": -0.18,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 1,
+          "spearmanRho": 0.131,
+          "pValue": 0.017
+        }
+      ],
+      "assessmentSummary": "Statistically significant positive correlation (ρ = 0.114, p = 0.0001). Higher scores systematically associate with improved expectancy.",
+      "predictiveUtility": "POSITIVE_EDGE"
+    },
+    {
+      "factorKey": "momentum",
+      "factorName": "Momentum & RSI Divergence",
+      "defaultWeight": 10,
+      "totalEvaluatedTrades": 1317,
+      "scoreDistribution": {
+        "mean": 73.9,
+        "stdDev": 21.2,
+        "median": 90,
+        "min": 30,
+        "max": 90,
+        "p25": 50,
+        "p75": 90
+      },
+      "buckets": [
+        {
+          "bucketRange": "0 – 20",
+          "minScore": 0,
+          "maxScore": 20,
+          "tradesCount": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakevens": 0,
+          "winRate": 0,
+          "lossRate": 0,
+          "netR": 0,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 0,
+          "averageHoldingBars": 0
+        },
+        {
+          "bucketRange": "21 – 40",
+          "minScore": 20.01,
+          "maxScore": 40,
+          "tradesCount": 90,
+          "wins": 26,
+          "losses": 38,
+          "breakevens": 26,
+          "winRate": 28.9,
+          "lossRate": 42.2,
+          "netR": -3.54,
+          "averageR": -0.04,
+          "expectancy": -0.04,
+          "profitFactor": 0.9,
+          "averageHoldingBars": 28.5
+        },
+        {
+          "bucketRange": "41 – 60",
+          "minScore": 40.01,
+          "maxScore": 60,
+          "tradesCount": 411,
+          "wins": 151,
+          "losses": 202,
+          "breakevens": 58,
+          "winRate": 36.7,
+          "lossRate": 49.1,
+          "netR": 4.19,
+          "averageR": 0.01,
+          "expectancy": 0.01,
+          "profitFactor": 1.03,
+          "averageHoldingBars": 23.9
+        },
+        {
+          "bucketRange": "61 – 80",
+          "minScore": 60.01,
+          "maxScore": 80,
+          "tradesCount": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakevens": 0,
+          "winRate": 0,
+          "lossRate": 0,
+          "netR": 0,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 0,
+          "averageHoldingBars": 0
+        },
+        {
+          "bucketRange": "81 – 100",
+          "minScore": 80.01,
+          "maxScore": 100,
+          "tradesCount": 816,
+          "wins": 260,
+          "losses": 421,
+          "breakevens": 135,
+          "winRate": 31.9,
+          "lossRate": 51.6,
+          "netR": -30.44,
+          "averageR": -0.04,
+          "expectancy": -0.04,
+          "profitFactor": 0.93,
+          "averageHoldingBars": 22.8
+        }
+      ],
+      "spearmanRho": 0.0469,
+      "pearsonR": -0.0128,
+      "pValue": 0.0888,
+      "tStatistic": 1.702,
+      "isStatisticallySignificant": false,
+      "monotonicity": "MODERATE_POSITIVE",
+      "directionBreakdown": {
+        "long": {
+          "groupName": "BUY (Long)",
+          "tradesCount": 690,
+          "winRate": 32.9,
+          "netR": -4.66,
+          "averageR": -0.01,
+          "expectancy": -0.01,
+          "profitFactor": 0.99,
+          "spearmanRho": 0.021,
+          "pValue": 0.5749
+        },
+        "short": {
+          "groupName": "SELL (Short)",
+          "tradesCount": 627,
+          "winRate": 33.5,
+          "netR": -25.13,
+          "averageR": -0.04,
+          "expectancy": -0.04,
+          "profitFactor": 0.92,
+          "spearmanRho": 0.074,
+          "pValue": 0.062
+        }
+      },
+      "regimeBreakdown": {
+        "Bearish Trend": {
+          "groupName": "Bearish Trend",
+          "tradesCount": 524,
+          "winRate": 33.4,
+          "netR": -6.46,
+          "averageR": -0.01,
+          "expectancy": -0.01,
+          "profitFactor": 0.97,
+          "spearmanRho": 0.091,
+          "pValue": 0.0366
+        },
+        "Bullish Trend": {
+          "groupName": "Bullish Trend",
+          "tradesCount": 450,
+          "winRate": 30.7,
+          "netR": -37.12,
+          "averageR": -0.08,
+          "expectancy": -0.08,
+          "profitFactor": 0.84,
+          "spearmanRho": 0.02,
+          "pValue": 0.6763
+        },
+        "Range / Consolidation": {
+          "groupName": "Range / Consolidation",
+          "tradesCount": 314,
+          "winRate": 36.9,
+          "netR": 12.45,
+          "averageR": 0.04,
+          "expectancy": 0.04,
+          "profitFactor": 1.09,
+          "spearmanRho": -0.025,
+          "pValue": 0.6621
+        },
+        "High Volatility": {
+          "groupName": "High Volatility",
+          "tradesCount": 29,
+          "winRate": 27.6,
+          "netR": 1.34,
+          "averageR": 0.05,
+          "expectancy": 0.05,
+          "profitFactor": 1.22,
+          "spearmanRho": 0.245,
+          "pValue": 0.4326
+        }
+      },
+      "chronologicalStability": [
+        {
+          "groupName": "Train Chunk 1 (0%-25%)",
+          "tradesCount": 330,
+          "winRate": 33.6,
+          "netR": -9.81,
+          "averageR": -0.03,
+          "expectancy": -0.03,
+          "profitFactor": 0.94,
+          "spearmanRho": -0.025,
+          "pValue": 0.6503
+        },
+        {
+          "groupName": "Train Chunk 2 (25%-50%)",
+          "tradesCount": 330,
+          "winRate": 36.1,
+          "netR": 23.1,
+          "averageR": 0.07,
+          "expectancy": 0.07,
+          "profitFactor": 1.16,
+          "spearmanRho": 0.087,
+          "pValue": 0.1142
+        },
+        {
+          "groupName": "Train Chunk 3 (50%-75%)",
+          "tradesCount": 330,
+          "winRate": 28.5,
+          "netR": -42.9,
+          "averageR": -0.13,
+          "expectancy": -0.13,
+          "profitFactor": 0.75,
+          "spearmanRho": 0.071,
+          "pValue": 0.1966
+        },
+        {
+          "groupName": "Train Chunk 4 (75%-100%)",
+          "tradesCount": 327,
+          "winRate": 34.6,
+          "netR": -0.18,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 1,
+          "spearmanRho": 0.091,
+          "pValue": 0.0977
+        }
+      ],
+      "assessmentSummary": "Weak or statistically insignificant correlation (ρ = 0.047, p = 0.0888). Factor scores behave like uncalibrated noise without standalone predictive power.",
+      "predictiveUtility": "NEUTRAL_NOISE"
+    },
+    {
+      "factorKey": "volatility",
+      "factorName": "Volatility & ATR Expansion",
+      "defaultWeight": 10,
+      "totalEvaluatedTrades": 1317,
+      "scoreDistribution": {
+        "mean": 64.5,
+        "stdDev": 21.5,
+        "median": 70,
+        "min": 40,
+        "max": 100,
+        "p25": 40,
+        "p75": 70
+      },
+      "buckets": [
+        {
+          "bucketRange": "0 – 20",
+          "minScore": 0,
+          "maxScore": 20,
+          "tradesCount": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakevens": 0,
+          "winRate": 0,
+          "lossRate": 0,
+          "netR": 0,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 0,
+          "averageHoldingBars": 0
+        },
+        {
+          "bucketRange": "21 – 40",
+          "minScore": 20.01,
+          "maxScore": 40,
+          "tradesCount": 480,
+          "wins": 155,
+          "losses": 210,
+          "breakevens": 115,
+          "winRate": 32.3,
+          "lossRate": 43.8,
+          "netR": -9.85,
+          "averageR": -0.02,
+          "expectancy": -0.02,
+          "profitFactor": 0.97,
+          "averageHoldingBars": 28.3
+        },
+        {
+          "bucketRange": "41 – 60",
+          "minScore": 40.01,
+          "maxScore": 60,
+          "tradesCount": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakevens": 0,
+          "winRate": 0,
+          "lossRate": 0,
+          "netR": 0,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 0,
+          "averageHoldingBars": 0
+        },
+        {
+          "bucketRange": "61 – 80",
+          "minScore": 60.01,
+          "maxScore": 80,
+          "tradesCount": 599,
+          "wins": 203,
+          "losses": 302,
+          "breakevens": 94,
+          "winRate": 33.9,
+          "lossRate": 50.4,
+          "netR": -5.94,
+          "averageR": -0.01,
+          "expectancy": -0.01,
+          "profitFactor": 0.98,
+          "averageHoldingBars": 22.6
+        },
+        {
+          "bucketRange": "81 – 100",
+          "minScore": 80.01,
+          "maxScore": 100,
+          "tradesCount": 238,
+          "wins": 79,
+          "losses": 149,
+          "breakevens": 10,
+          "winRate": 33.2,
+          "lossRate": 62.6,
+          "netR": -14,
+          "averageR": -0.06,
+          "expectancy": -0.06,
+          "profitFactor": 0.9,
+          "averageHoldingBars": 16.3
+        }
+      ],
+      "spearmanRho": -0.0144,
+      "pearsonR": -0.0094,
+      "pValue": 0.6018,
+      "tStatistic": -0.522,
+      "isStatisticallySignificant": false,
+      "monotonicity": "NON_MONOTONIC",
+      "directionBreakdown": {
+        "long": {
+          "groupName": "BUY (Long)",
+          "tradesCount": 690,
+          "winRate": 32.9,
+          "netR": -4.66,
+          "averageR": -0.01,
+          "expectancy": -0.01,
+          "profitFactor": 0.99,
+          "spearmanRho": 0.008,
+          "pValue": 0.8404
+        },
+        "short": {
+          "groupName": "SELL (Short)",
+          "tradesCount": 627,
+          "winRate": 33.5,
+          "netR": -25.13,
+          "averageR": -0.04,
+          "expectancy": -0.04,
+          "profitFactor": 0.92,
+          "spearmanRho": -0.041,
+          "pValue": 0.2999
+        }
+      },
+      "regimeBreakdown": {
+        "Bearish Trend": {
+          "groupName": "Bearish Trend",
+          "tradesCount": 524,
+          "winRate": 33.4,
+          "netR": -6.46,
+          "averageR": -0.01,
+          "expectancy": -0.01,
+          "profitFactor": 0.97,
+          "spearmanRho": -0.006,
+          "pValue": 0.8927
+        },
+        "Bullish Trend": {
+          "groupName": "Bullish Trend",
+          "tradesCount": 450,
+          "winRate": 30.7,
+          "netR": -37.12,
+          "averageR": -0.08,
+          "expectancy": -0.08,
+          "profitFactor": 0.84,
+          "spearmanRho": -0.023,
+          "pValue": 0.6276
+        },
+        "Range / Consolidation": {
+          "groupName": "Range / Consolidation",
+          "tradesCount": 314,
+          "winRate": 36.9,
+          "netR": 12.45,
+          "averageR": 0.04,
+          "expectancy": 0.04,
+          "profitFactor": 1.09,
+          "spearmanRho": -0.02,
+          "pValue": 0.7284
+        },
+        "High Volatility": {
+          "groupName": "High Volatility",
+          "tradesCount": 29,
+          "winRate": 27.6,
+          "netR": 1.34,
+          "averageR": 0.05,
+          "expectancy": 0.05,
+          "profitFactor": 1.22,
+          "spearmanRho": 0.154,
+          "pValue": 0.7227
+        }
+      },
+      "chronologicalStability": [
+        {
+          "groupName": "Train Chunk 1 (0%-25%)",
+          "tradesCount": 330,
+          "winRate": 33.6,
+          "netR": -9.81,
+          "averageR": -0.03,
+          "expectancy": -0.03,
+          "profitFactor": 0.94,
+          "spearmanRho": -0.004,
+          "pValue": 0.94
+        },
+        {
+          "groupName": "Train Chunk 2 (25%-50%)",
+          "tradesCount": 330,
+          "winRate": 36.1,
+          "netR": 23.1,
+          "averageR": 0.07,
+          "expectancy": 0.07,
+          "profitFactor": 1.16,
+          "spearmanRho": -0.017,
+          "pValue": 0.7556
+        },
+        {
+          "groupName": "Train Chunk 3 (50%-75%)",
+          "tradesCount": 330,
+          "winRate": 28.5,
+          "netR": -42.9,
+          "averageR": -0.13,
+          "expectancy": -0.13,
+          "profitFactor": 0.75,
+          "spearmanRho": -0.007,
+          "pValue": 0.9
+        },
+        {
+          "groupName": "Train Chunk 4 (75%-100%)",
+          "tradesCount": 327,
+          "winRate": 34.6,
+          "netR": -0.18,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 1,
+          "spearmanRho": -0.042,
+          "pValue": 0.4457
+        }
+      ],
+      "assessmentSummary": "Weak or statistically insignificant correlation (ρ = -0.014, p = 0.6018). Factor scores behave like uncalibrated noise without standalone predictive power.",
+      "predictiveUtility": "NEUTRAL_NOISE"
+    },
+    {
+      "factorKey": "supportResistance",
+      "factorName": "Support / Resistance Zones",
+      "defaultWeight": 15,
+      "totalEvaluatedTrades": 1317,
+      "scoreDistribution": {
+        "mean": 73.8,
+        "stdDev": 34.3,
+        "median": 100,
+        "min": 20,
+        "max": 100,
+        "p25": 20,
+        "p75": 100
+      },
+      "buckets": [
+        {
+          "bucketRange": "0 – 20",
+          "minScore": 0,
+          "maxScore": 20,
+          "tradesCount": 354,
+          "wins": 105,
+          "losses": 175,
+          "breakevens": 74,
+          "winRate": 29.7,
+          "lossRate": 49.4,
+          "netR": -23.98,
+          "averageR": -0.07,
+          "expectancy": -0.07,
+          "profitFactor": 0.86,
+          "averageHoldingBars": 23.4
+        },
+        {
+          "bucketRange": "21 – 40",
+          "minScore": 20.01,
+          "maxScore": 40,
+          "tradesCount": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakevens": 0,
+          "winRate": 0,
+          "lossRate": 0,
+          "netR": 0,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 0,
+          "averageHoldingBars": 0
+        },
+        {
+          "bucketRange": "41 – 60",
+          "minScore": 40.01,
+          "maxScore": 60,
+          "tradesCount": 1,
+          "wins": 1,
+          "losses": 0,
+          "breakevens": 0,
+          "winRate": 100,
+          "lossRate": 0,
+          "netR": 0.59,
+          "averageR": 0.59,
+          "expectancy": 0.59,
+          "profitFactor": 99,
+          "averageHoldingBars": 35
+        },
+        {
+          "bucketRange": "61 – 80",
+          "minScore": 60.01,
+          "maxScore": 80,
+          "tradesCount": 205,
+          "wins": 65,
+          "losses": 92,
+          "breakevens": 48,
+          "winRate": 31.7,
+          "lossRate": 44.9,
+          "netR": -3.83,
+          "averageR": -0.02,
+          "expectancy": -0.02,
+          "profitFactor": 0.98,
+          "averageHoldingBars": 26.2
+        },
+        {
+          "bucketRange": "81 – 100",
+          "minScore": 80.01,
+          "maxScore": 100,
+          "tradesCount": 757,
+          "wins": 266,
+          "losses": 394,
+          "breakevens": 97,
+          "winRate": 35.1,
+          "lossRate": 52,
+          "netR": -2.57,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 1,
+          "averageHoldingBars": 22.9
+        }
+      ],
+      "spearmanRho": 0.0851,
+      "pearsonR": 0.025,
+      "pValue": 0.0019,
+      "tStatistic": 3.099,
+      "isStatisticallySignificant": true,
+      "monotonicity": "MONOTONIC_POSITIVE",
+      "directionBreakdown": {
+        "long": {
+          "groupName": "BUY (Long)",
+          "tradesCount": 690,
+          "winRate": 32.9,
+          "netR": -4.66,
+          "averageR": -0.01,
+          "expectancy": -0.01,
+          "profitFactor": 0.99,
+          "spearmanRho": 0.065,
+          "pValue": 0.0873
+        },
+        "short": {
+          "groupName": "SELL (Short)",
+          "tradesCount": 627,
+          "winRate": 33.5,
+          "netR": -25.13,
+          "averageR": -0.04,
+          "expectancy": -0.04,
+          "profitFactor": 0.92,
+          "spearmanRho": 0.101,
+          "pValue": 0.0112
+        }
+      },
+      "regimeBreakdown": {
+        "Bearish Trend": {
+          "groupName": "Bearish Trend",
+          "tradesCount": 524,
+          "winRate": 33.4,
+          "netR": -6.46,
+          "averageR": -0.01,
+          "expectancy": -0.01,
+          "profitFactor": 0.97,
+          "spearmanRho": 0.123,
+          "pValue": 0.0046
+        },
+        "Bullish Trend": {
+          "groupName": "Bullish Trend",
+          "tradesCount": 450,
+          "winRate": 30.7,
+          "netR": -37.12,
+          "averageR": -0.08,
+          "expectancy": -0.08,
+          "profitFactor": 0.84,
+          "spearmanRho": 0.01,
+          "pValue": 0.8354
+        },
+        "Range / Consolidation": {
+          "groupName": "Range / Consolidation",
+          "tradesCount": 314,
+          "winRate": 36.9,
+          "netR": 12.45,
+          "averageR": 0.04,
+          "expectancy": 0.04,
+          "profitFactor": 1.09,
+          "spearmanRho": 0.13,
+          "pValue": 0.0209
+        },
+        "High Volatility": {
+          "groupName": "High Volatility",
+          "tradesCount": 29,
+          "winRate": 27.6,
+          "netR": 1.34,
+          "averageR": 0.05,
+          "expectancy": 0.05,
+          "profitFactor": 1.22,
+          "spearmanRho": -0.246,
+          "pValue": 0.4311
+        }
+      },
+      "chronologicalStability": [
+        {
+          "groupName": "Train Chunk 1 (0%-25%)",
+          "tradesCount": 330,
+          "winRate": 33.6,
+          "netR": -9.81,
+          "averageR": -0.03,
+          "expectancy": -0.03,
+          "profitFactor": 0.94,
+          "spearmanRho": 0.101,
+          "pValue": 0.0669
+        },
+        {
+          "groupName": "Train Chunk 2 (25%-50%)",
+          "tradesCount": 330,
+          "winRate": 36.1,
+          "netR": 23.1,
+          "averageR": 0.07,
+          "expectancy": 0.07,
+          "profitFactor": 1.16,
+          "spearmanRho": 0.099,
+          "pValue": 0.0709
+        },
+        {
+          "groupName": "Train Chunk 3 (50%-75%)",
+          "tradesCount": 330,
+          "winRate": 28.5,
+          "netR": -42.9,
+          "averageR": -0.13,
+          "expectancy": -0.13,
+          "profitFactor": 0.75,
+          "spearmanRho": 0.095,
+          "pValue": 0.0844
+        },
+        {
+          "groupName": "Train Chunk 4 (75%-100%)",
+          "tradesCount": 327,
+          "winRate": 34.6,
+          "netR": -0.18,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 1,
+          "spearmanRho": 0.064,
+          "pValue": 0.2444
+        }
+      ],
+      "assessmentSummary": "Statistically significant positive correlation (ρ = 0.085, p = 0.0019). Higher scores systematically associate with improved expectancy.",
+      "predictiveUtility": "POSITIVE_EDGE"
+    },
+    {
+      "factorKey": "liquidity",
+      "factorName": "Liquidity Sweeps & V-Reversals",
+      "defaultWeight": 10,
+      "totalEvaluatedTrades": 1317,
+      "scoreDistribution": {
+        "mean": 65.8,
+        "stdDev": 32.2,
+        "median": 60,
+        "min": 30,
+        "max": 100,
+        "p25": 30,
+        "p75": 100
+      },
+      "buckets": [
+        {
+          "bucketRange": "0 – 20",
+          "minScore": 0,
+          "maxScore": 20,
+          "tradesCount": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakevens": 0,
+          "winRate": 0,
+          "lossRate": 0,
+          "netR": 0,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 0,
+          "averageHoldingBars": 0
+        },
+        {
+          "bucketRange": "21 – 40",
+          "minScore": 20.01,
+          "maxScore": 40,
+          "tradesCount": 526,
+          "wins": 175,
+          "losses": 253,
+          "breakevens": 98,
+          "winRate": 33.3,
+          "lossRate": 48.1,
+          "netR": -3.57,
+          "averageR": -0.01,
+          "expectancy": -0.01,
+          "profitFactor": 1,
+          "averageHoldingBars": 23.8
+        },
+        {
+          "bucketRange": "41 – 60",
+          "minScore": 40.01,
+          "maxScore": 60,
+          "tradesCount": 205,
+          "wins": 66,
+          "losses": 107,
+          "breakevens": 32,
+          "winRate": 32.2,
+          "lossRate": 52.2,
+          "netR": -14.55,
+          "averageR": -0.07,
+          "expectancy": -0.07,
+          "profitFactor": 0.86,
+          "averageHoldingBars": 23.2
+        },
+        {
+          "bucketRange": "61 – 80",
+          "minScore": 60.01,
+          "maxScore": 80,
+          "tradesCount": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakevens": 0,
+          "winRate": 0,
+          "lossRate": 0,
+          "netR": 0,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 0,
+          "averageHoldingBars": 0
+        },
+        {
+          "bucketRange": "81 – 100",
+          "minScore": 80.01,
+          "maxScore": 100,
+          "tradesCount": 586,
+          "wins": 196,
+          "losses": 301,
+          "breakevens": 89,
+          "winRate": 33.4,
+          "lossRate": 51.4,
+          "netR": -11.67,
+          "averageR": -0.02,
+          "expectancy": -0.02,
+          "profitFactor": 0.96,
+          "averageHoldingBars": 23.4
+        }
+      ],
+      "spearmanRho": 0.0475,
+      "pearsonR": -0.0041,
+      "pValue": 0.0847,
+      "tStatistic": 1.724,
+      "isStatisticallySignificant": false,
+      "monotonicity": "MODERATE_POSITIVE",
+      "directionBreakdown": {
+        "long": {
+          "groupName": "BUY (Long)",
+          "tradesCount": 690,
+          "winRate": 32.9,
+          "netR": -4.66,
+          "averageR": -0.01,
+          "expectancy": -0.01,
+          "profitFactor": 0.99,
+          "spearmanRho": 0.037,
+          "pValue": 0.3351
+        },
+        "short": {
+          "groupName": "SELL (Short)",
+          "tradesCount": 627,
+          "winRate": 33.5,
+          "netR": -25.13,
+          "averageR": -0.04,
+          "expectancy": -0.04,
+          "profitFactor": 0.92,
+          "spearmanRho": 0.053,
+          "pValue": 0.182
+        }
+      },
+      "regimeBreakdown": {
+        "Bearish Trend": {
+          "groupName": "Bearish Trend",
+          "tradesCount": 524,
+          "winRate": 33.4,
+          "netR": -6.46,
+          "averageR": -0.01,
+          "expectancy": -0.01,
+          "profitFactor": 0.97,
+          "spearmanRho": 0.087,
+          "pValue": 0.0452
+        },
+        "Bullish Trend": {
+          "groupName": "Bullish Trend",
+          "tradesCount": 450,
+          "winRate": 30.7,
+          "netR": -37.12,
+          "averageR": -0.08,
+          "expectancy": -0.08,
+          "profitFactor": 0.84,
+          "spearmanRho": -0.039,
+          "pValue": 0.4097
+        },
+        "Range / Consolidation": {
+          "groupName": "Range / Consolidation",
+          "tradesCount": 314,
+          "winRate": 36.9,
+          "netR": 12.45,
+          "averageR": 0.04,
+          "expectancy": 0.04,
+          "profitFactor": 1.09,
+          "spearmanRho": 0.105,
+          "pValue": 0.0622
+        },
+        "High Volatility": {
+          "groupName": "High Volatility",
+          "tradesCount": 29,
+          "winRate": 27.6,
+          "netR": 1.34,
+          "averageR": 0.05,
+          "expectancy": 0.05,
+          "profitFactor": 1.22,
+          "spearmanRho": -0.238,
+          "pValue": 0.4538
+        }
+      },
+      "chronologicalStability": [
+        {
+          "groupName": "Train Chunk 1 (0%-25%)",
+          "tradesCount": 330,
+          "winRate": 33.6,
+          "netR": -9.81,
+          "averageR": -0.03,
+          "expectancy": -0.03,
+          "profitFactor": 0.94,
+          "spearmanRho": 0.063,
+          "pValue": 0.2565
+        },
+        {
+          "groupName": "Train Chunk 2 (25%-50%)",
+          "tradesCount": 330,
+          "winRate": 36.1,
+          "netR": 23.1,
+          "averageR": 0.07,
+          "expectancy": 0.07,
+          "profitFactor": 1.16,
+          "spearmanRho": 0.039,
+          "pValue": 0.4847
+        },
+        {
+          "groupName": "Train Chunk 3 (50%-75%)",
+          "tradesCount": 330,
+          "winRate": 28.5,
+          "netR": -42.9,
+          "averageR": -0.13,
+          "expectancy": -0.13,
+          "profitFactor": 0.75,
+          "spearmanRho": 0.072,
+          "pValue": 0.1884
+        },
+        {
+          "groupName": "Train Chunk 4 (75%-100%)",
+          "tradesCount": 327,
+          "winRate": 34.6,
+          "netR": -0.18,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 1,
+          "spearmanRho": 0.078,
+          "pValue": 0.1587
+        }
+      ],
+      "assessmentSummary": "Weak or statistically insignificant correlation (ρ = 0.047, p = 0.0847). Factor scores behave like uncalibrated noise without standalone predictive power.",
+      "predictiveUtility": "NEUTRAL_NOISE"
+    },
+    {
+      "factorKey": "tradingSession",
+      "factorName": "Active Trading Session Timing",
+      "defaultWeight": 5,
+      "totalEvaluatedTrades": 1317,
+      "scoreDistribution": {
+        "mean": 70.3,
+        "stdDev": 24.8,
+        "median": 80,
+        "min": 20,
+        "max": 100,
+        "p25": 40,
+        "p75": 80
+      },
+      "buckets": [
+        {
+          "bucketRange": "0 – 20",
+          "minScore": 0,
+          "maxScore": 20,
+          "tradesCount": 87,
+          "wins": 26,
+          "losses": 48,
+          "breakevens": 13,
+          "winRate": 29.9,
+          "lossRate": 55.2,
+          "netR": -13.13,
+          "averageR": -0.15,
+          "expectancy": -0.15,
+          "profitFactor": 0.67,
+          "averageHoldingBars": 27.7
+        },
+        {
+          "bucketRange": "21 – 40",
+          "minScore": 20.01,
+          "maxScore": 40,
+          "tradesCount": 322,
+          "wins": 114,
+          "losses": 165,
+          "breakevens": 43,
+          "winRate": 35.4,
+          "lossRate": 51.2,
+          "netR": 0.07,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 1.02,
+          "averageHoldingBars": 22.8
+        },
+        {
+          "bucketRange": "41 – 60",
+          "minScore": 40.01,
+          "maxScore": 60,
+          "tradesCount": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakevens": 0,
+          "winRate": 0,
+          "lossRate": 0,
+          "netR": 0,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 0,
+          "averageHoldingBars": 0
+        },
+        {
+          "bucketRange": "61 – 80",
+          "minScore": 60.01,
+          "maxScore": 80,
+          "tradesCount": 639,
+          "wins": 226,
+          "losses": 294,
+          "breakevens": 119,
+          "winRate": 35.4,
+          "lossRate": 46,
+          "netR": 22.28,
+          "averageR": 0.03,
+          "expectancy": 0.03,
+          "profitFactor": 1.09,
+          "averageHoldingBars": 23.9
+        },
+        {
+          "bucketRange": "81 – 100",
+          "minScore": 80.01,
+          "maxScore": 100,
+          "tradesCount": 269,
+          "wins": 71,
+          "losses": 154,
+          "breakevens": 44,
+          "winRate": 26.4,
+          "lossRate": 57.2,
+          "netR": -39.01,
+          "averageR": -0.15,
+          "expectancy": -0.15,
+          "profitFactor": 0.73,
+          "averageHoldingBars": 22.1
+        }
+      ],
+      "spearmanRho": 0.0351,
+      "pearsonR": -0.008,
+      "pValue": 0.2023,
+      "tStatistic": 1.275,
+      "isStatisticallySignificant": false,
+      "monotonicity": "MODERATE_POSITIVE",
+      "directionBreakdown": {
+        "long": {
+          "groupName": "BUY (Long)",
+          "tradesCount": 690,
+          "winRate": 32.9,
+          "netR": -4.66,
+          "averageR": -0.01,
+          "expectancy": -0.01,
+          "profitFactor": 0.99,
+          "spearmanRho": 0.036,
+          "pValue": 0.3488
+        },
+        "short": {
+          "groupName": "SELL (Short)",
+          "tradesCount": 627,
+          "winRate": 33.5,
+          "netR": -25.13,
+          "averageR": -0.04,
+          "expectancy": -0.04,
+          "profitFactor": 0.92,
+          "spearmanRho": 0.032,
+          "pValue": 0.4258
+        }
+      },
+      "regimeBreakdown": {
+        "Bearish Trend": {
+          "groupName": "Bearish Trend",
+          "tradesCount": 524,
+          "winRate": 33.4,
+          "netR": -6.46,
+          "averageR": -0.01,
+          "expectancy": -0.01,
+          "profitFactor": 0.97,
+          "spearmanRho": 0.042,
+          "pValue": 0.3406
+        },
+        "Bullish Trend": {
+          "groupName": "Bullish Trend",
+          "tradesCount": 450,
+          "winRate": 30.7,
+          "netR": -37.12,
+          "averageR": -0.08,
+          "expectancy": -0.08,
+          "profitFactor": 0.84,
+          "spearmanRho": -0.016,
+          "pValue": 0.7399
+        },
+        "Range / Consolidation": {
+          "groupName": "Range / Consolidation",
+          "tradesCount": 314,
+          "winRate": 36.9,
+          "netR": 12.45,
+          "averageR": 0.04,
+          "expectancy": 0.04,
+          "profitFactor": 1.09,
+          "spearmanRho": 0.099,
+          "pValue": 0.079
+        },
+        "High Volatility": {
+          "groupName": "High Volatility",
+          "tradesCount": 29,
+          "winRate": 27.6,
+          "netR": 1.34,
+          "averageR": 0.05,
+          "expectancy": 0.05,
+          "profitFactor": 1.22,
+          "spearmanRho": -0.021,
+          "pValue": 0.994
+        }
+      },
+      "chronologicalStability": [
+        {
+          "groupName": "Train Chunk 1 (0%-25%)",
+          "tradesCount": 330,
+          "winRate": 33.6,
+          "netR": -9.81,
+          "averageR": -0.03,
+          "expectancy": -0.03,
+          "profitFactor": 0.94,
+          "spearmanRho": 0.069,
+          "pValue": 0.2127
+        },
+        {
+          "groupName": "Train Chunk 2 (25%-50%)",
+          "tradesCount": 330,
+          "winRate": 36.1,
+          "netR": 23.1,
+          "averageR": 0.07,
+          "expectancy": 0.07,
+          "profitFactor": 1.16,
+          "spearmanRho": 0.007,
+          "pValue": 0.8943
+        },
+        {
+          "groupName": "Train Chunk 3 (50%-75%)",
+          "tradesCount": 330,
+          "winRate": 28.5,
+          "netR": -42.9,
+          "averageR": -0.13,
+          "expectancy": -0.13,
+          "profitFactor": 0.75,
+          "spearmanRho": 0.011,
+          "pValue": 0.8416
+        },
+        {
+          "groupName": "Train Chunk 4 (75%-100%)",
+          "tradesCount": 327,
+          "winRate": 34.6,
+          "netR": -0.18,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 1,
+          "spearmanRho": -0.001,
+          "pValue": 0.9922
+        }
+      ],
+      "assessmentSummary": "Weak or statistically insignificant correlation (ρ = 0.035, p = 0.2023). Factor scores behave like uncalibrated noise without standalone predictive power.",
+      "predictiveUtility": "NEUTRAL_NOISE"
+    },
+    {
+      "factorKey": "riskReward",
+      "factorName": "Risk-to-Reward Geometry",
+      "defaultWeight": 15,
+      "totalEvaluatedTrades": 1317,
+      "scoreDistribution": {
+        "mean": 90,
+        "stdDev": 0,
+        "median": 90,
+        "min": 90,
+        "max": 90,
+        "p25": 90,
+        "p75": 90
+      },
+      "buckets": [
+        {
+          "bucketRange": "0 – 20",
+          "minScore": 0,
+          "maxScore": 20,
+          "tradesCount": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakevens": 0,
+          "winRate": 0,
+          "lossRate": 0,
+          "netR": 0,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 0,
+          "averageHoldingBars": 0
+        },
+        {
+          "bucketRange": "21 – 40",
+          "minScore": 20.01,
+          "maxScore": 40,
+          "tradesCount": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakevens": 0,
+          "winRate": 0,
+          "lossRate": 0,
+          "netR": 0,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 0,
+          "averageHoldingBars": 0
+        },
+        {
+          "bucketRange": "41 – 60",
+          "minScore": 40.01,
+          "maxScore": 60,
+          "tradesCount": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakevens": 0,
+          "winRate": 0,
+          "lossRate": 0,
+          "netR": 0,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 0,
+          "averageHoldingBars": 0
+        },
+        {
+          "bucketRange": "61 – 80",
+          "minScore": 60.01,
+          "maxScore": 80,
+          "tradesCount": 0,
+          "wins": 0,
+          "losses": 0,
+          "breakevens": 0,
+          "winRate": 0,
+          "lossRate": 0,
+          "netR": 0,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 0,
+          "averageHoldingBars": 0
+        },
+        {
+          "bucketRange": "81 – 100",
+          "minScore": 80.01,
+          "maxScore": 100,
+          "tradesCount": 1317,
+          "wins": 437,
+          "losses": 661,
+          "breakevens": 219,
+          "winRate": 33.2,
+          "lossRate": 50.2,
+          "netR": -29.79,
+          "averageR": -0.02,
+          "expectancy": -0.02,
+          "profitFactor": 0.96,
+          "averageHoldingBars": 23.5
+        }
+      ],
+      "spearmanRho": 0.1662,
+      "pearsonR": 0,
+      "pValue": 0.0001,
+      "tStatistic": 6.113,
+      "isStatisticallySignificant": true,
+      "monotonicity": "NON_MONOTONIC",
+      "directionBreakdown": {
+        "long": {
+          "groupName": "BUY (Long)",
+          "tradesCount": 690,
+          "winRate": 32.9,
+          "netR": -4.66,
+          "averageR": -0.01,
+          "expectancy": -0.01,
+          "profitFactor": 0.99,
+          "spearmanRho": 0.146,
+          "pValue": 0.0001
+        },
+        "short": {
+          "groupName": "SELL (Short)",
+          "tradesCount": 627,
+          "winRate": 33.5,
+          "netR": -25.13,
+          "averageR": -0.04,
+          "expectancy": -0.04,
+          "profitFactor": 0.92,
+          "spearmanRho": 0.181,
+          "pValue": 0.0001
+        }
+      },
+      "regimeBreakdown": {
+        "Bearish Trend": {
+          "groupName": "Bearish Trend",
+          "tradesCount": 524,
+          "winRate": 33.4,
+          "netR": -6.46,
+          "averageR": -0.01,
+          "expectancy": -0.01,
+          "profitFactor": 0.97,
+          "spearmanRho": 0.194,
+          "pValue": 0.0001
+        },
+        "Bullish Trend": {
+          "groupName": "Bullish Trend",
+          "tradesCount": 450,
+          "winRate": 30.7,
+          "netR": -37.12,
+          "averageR": -0.08,
+          "expectancy": -0.08,
+          "profitFactor": 0.84,
+          "spearmanRho": 0.138,
+          "pValue": 0.0033
+        },
+        "Range / Consolidation": {
+          "groupName": "Range / Consolidation",
+          "tradesCount": 314,
+          "winRate": 36.9,
+          "netR": 12.45,
+          "averageR": 0.04,
+          "expectancy": 0.04,
+          "profitFactor": 1.09,
+          "spearmanRho": 0.18,
+          "pValue": 0.0012
+        },
+        "High Volatility": {
+          "groupName": "High Volatility",
+          "tradesCount": 29,
+          "winRate": 27.6,
+          "netR": 1.34,
+          "averageR": 0.05,
+          "expectancy": 0.05,
+          "profitFactor": 1.22,
+          "spearmanRho": -0.141,
+          "pValue": 0.7614
+        }
+      },
+      "chronologicalStability": [
+        {
+          "groupName": "Train Chunk 1 (0%-25%)",
+          "tradesCount": 330,
+          "winRate": 33.6,
+          "netR": -9.81,
+          "averageR": -0.03,
+          "expectancy": -0.03,
+          "profitFactor": 0.94,
+          "spearmanRho": 0.173,
+          "pValue": 0.0015
+        },
+        {
+          "groupName": "Train Chunk 2 (25%-50%)",
+          "tradesCount": 330,
+          "winRate": 36.1,
+          "netR": 23.1,
+          "averageR": 0.07,
+          "expectancy": 0.07,
+          "profitFactor": 1.16,
+          "spearmanRho": 0.177,
+          "pValue": 0.0011
+        },
+        {
+          "groupName": "Train Chunk 3 (50%-75%)",
+          "tradesCount": 330,
+          "winRate": 28.5,
+          "netR": -42.9,
+          "averageR": -0.13,
+          "expectancy": -0.13,
+          "profitFactor": 0.75,
+          "spearmanRho": 0.165,
+          "pValue": 0.0024
+        },
+        {
+          "groupName": "Train Chunk 4 (75%-100%)",
+          "tradesCount": 327,
+          "winRate": 34.6,
+          "netR": -0.18,
+          "averageR": 0,
+          "expectancy": 0,
+          "profitFactor": 1,
+          "spearmanRho": 0.17,
+          "pValue": 0.0018
+        }
+      ],
+      "assessmentSummary": "Statistically significant positive correlation (ρ = 0.166, p = 0.0001). Higher scores systematically associate with improved expectancy.",
+      "predictiveUtility": "POSITIVE_EDGE"
+    }
+  ],
+  "ablationStudy": [
+    {
+      "ablatedFactorKey": "NONE_BASELINE",
+      "ablatedFactorName": "Baseline (All Factors Active)",
+      "tradesCount": 1317,
+      "winRate": 37.5,
+      "netR": -29.79,
+      "averageR": -0.02,
+      "expectancy": -0.02,
+      "profitFactor": 0.95,
+      "maxDrawdownR": 57.53,
+      "deltaExpectancy": 0,
+      "deltaNetR": 0,
+      "deltaProfitFactor": 0,
+      "deltaTradesCount": 0,
+      "impactVerdict": "MINIMAL_IMPACT"
+    },
+    {
+      "ablatedFactorKey": "trend",
+      "ablatedFactorName": "Ablate: Trend Alignment (EMA Stack)",
+      "tradesCount": 1287,
+      "winRate": 38.6,
+      "netR": -20.26,
+      "averageR": -0.02,
+      "expectancy": -0.02,
+      "profitFactor": 0.97,
+      "maxDrawdownR": 55.39,
+      "deltaExpectancy": 0,
+      "deltaNetR": 9.53,
+      "deltaProfitFactor": 0.02,
+      "deltaTradesCount": -30,
+      "impactVerdict": "IMPROVES_WITHOUT_FACTOR"
+    },
+    {
+      "ablatedFactorKey": "marketStructure",
+      "ablatedFactorName": "Ablate: Market Structure & Swings",
+      "tradesCount": 1323,
+      "winRate": 38.8,
+      "netR": -34.4,
+      "averageR": -0.03,
+      "expectancy": -0.03,
+      "profitFactor": 0.94,
+      "maxDrawdownR": 54.86,
+      "deltaExpectancy": -0.01,
+      "deltaNetR": -4.61,
+      "deltaProfitFactor": -0.01,
+      "deltaTradesCount": 6,
+      "impactVerdict": "MINIMAL_IMPACT"
+    },
+    {
+      "ablatedFactorKey": "momentum",
+      "ablatedFactorName": "Ablate: Momentum & RSI Divergence",
+      "tradesCount": 1310,
+      "winRate": 37.1,
+      "netR": -47.71,
+      "averageR": -0.04,
+      "expectancy": -0.04,
+      "profitFactor": 0.92,
+      "maxDrawdownR": 55.9,
+      "deltaExpectancy": -0.02,
+      "deltaNetR": -17.92,
+      "deltaProfitFactor": -0.03,
+      "deltaTradesCount": -7,
+      "impactVerdict": "DEGRADES_WITHOUT_FACTOR"
+    },
+    {
+      "ablatedFactorKey": "volatility",
+      "ablatedFactorName": "Ablate: Volatility & ATR Expansion",
+      "tradesCount": 1319,
+      "winRate": 37.8,
+      "netR": -54.75,
+      "averageR": -0.04,
+      "expectancy": -0.04,
+      "profitFactor": 0.91,
+      "maxDrawdownR": 70.58,
+      "deltaExpectancy": -0.02,
+      "deltaNetR": -24.96,
+      "deltaProfitFactor": -0.04,
+      "deltaTradesCount": 2,
+      "impactVerdict": "DEGRADES_WITHOUT_FACTOR"
+    },
+    {
+      "ablatedFactorKey": "supportResistance",
+      "ablatedFactorName": "Ablate: Support / Resistance Zones",
+      "tradesCount": 1311,
+      "winRate": 38.3,
+      "netR": -61.72,
+      "averageR": -0.05,
+      "expectancy": -0.04,
+      "profitFactor": 0.9,
+      "maxDrawdownR": 98.08,
+      "deltaExpectancy": -0.02,
+      "deltaNetR": -31.93,
+      "deltaProfitFactor": -0.05,
+      "deltaTradesCount": -6,
+      "impactVerdict": "DEGRADES_WITHOUT_FACTOR"
+    },
+    {
+      "ablatedFactorKey": "liquidity",
+      "ablatedFactorName": "Ablate: Liquidity Sweeps & V-Reversals",
+      "tradesCount": 1305,
+      "winRate": 37.4,
+      "netR": -48.89,
+      "averageR": -0.04,
+      "expectancy": -0.04,
+      "profitFactor": 0.92,
+      "maxDrawdownR": 57.48,
+      "deltaExpectancy": -0.02,
+      "deltaNetR": -19.1,
+      "deltaProfitFactor": -0.03,
+      "deltaTradesCount": -12,
+      "impactVerdict": "DEGRADES_WITHOUT_FACTOR"
+    },
+    {
+      "ablatedFactorKey": "tradingSession",
+      "ablatedFactorName": "Ablate: Active Trading Session Timing",
+      "tradesCount": 1310,
+      "winRate": 37.8,
+      "netR": -36.39,
+      "averageR": -0.03,
+      "expectancy": -0.03,
+      "profitFactor": 0.94,
+      "maxDrawdownR": 58.1,
+      "deltaExpectancy": -0.01,
+      "deltaNetR": -6.6,
+      "deltaProfitFactor": -0.01,
+      "deltaTradesCount": -7,
+      "impactVerdict": "DEGRADES_WITHOUT_FACTOR"
+    },
+    {
+      "ablatedFactorKey": "riskReward",
+      "ablatedFactorName": "Ablate: Risk-to-Reward Geometry",
+      "tradesCount": 1270,
+      "winRate": 37.6,
+      "netR": -33.09,
+      "averageR": -0.03,
+      "expectancy": -0.02,
+      "profitFactor": 0.95,
+      "maxDrawdownR": 55.48,
+      "deltaExpectancy": 0,
+      "deltaNetR": -3.3,
+      "deltaProfitFactor": 0,
+      "deltaTradesCount": -47,
+      "impactVerdict": "MINIMAL_IMPACT"
+    }
+  ],
+  "pairwiseInteractions": [
+    {
+      "factorA": "trend",
+      "factorAName": "Trend Alignment (EMA Stack)",
+      "factorB": "marketStructure",
+      "factorBName": "Market Structure & Swings",
+      "correlation": -0.085,
+      "concordanceScore": 0.458,
+      "highA_highB": {
+        "count": 941,
+        "winRate": 31.7,
+        "avgR": -0.04,
+        "expectancy": -0.04,
+        "profitFactor": 0.93
+      },
+      "highA_lowB": {
+        "count": 226,
+        "winRate": 33.6,
+        "avgR": -0.05,
+        "expectancy": -0.05,
+        "profitFactor": 0.91
+      },
+      "lowA_highB": {
+        "count": 143,
+        "winRate": 41.3,
+        "avgR": 0.09,
+        "expectancy": 0.09,
+        "profitFactor": 1.21
+      },
+      "lowA_lowB": {
+        "count": 7,
+        "winRate": 57.1,
+        "avgR": 0.15,
+        "expectancy": 0.15,
+        "profitFactor": 1.35
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "trend",
+      "factorAName": "Trend Alignment (EMA Stack)",
+      "factorB": "momentum",
+      "factorBName": "Momentum & RSI Divergence",
+      "correlation": 0.044,
+      "concordanceScore": 0.522,
+      "highA_highB": {
+        "count": 1077,
+        "winRate": 32.3,
+        "avgR": -0.04,
+        "expectancy": -0.04,
+        "profitFactor": 0.92
+      },
+      "highA_lowB": {
+        "count": 90,
+        "winRate": 28.9,
+        "avgR": -0.04,
+        "expectancy": -0.04,
+        "profitFactor": 0.89
+      },
+      "lowA_highB": {
+        "count": 150,
+        "winRate": 42,
+        "avgR": 0.09,
+        "expectancy": 0.09,
+        "profitFactor": 1.22
+      },
+      "lowA_lowB": {
+        "count": 0,
+        "winRate": 0,
+        "avgR": 0,
+        "expectancy": 0,
+        "profitFactor": 0
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "trend",
+      "factorAName": "Trend Alignment (EMA Stack)",
+      "factorB": "volatility",
+      "factorBName": "Volatility & ATR Expansion",
+      "correlation": 0.002,
+      "concordanceScore": 0.501,
+      "highA_highB": {
+        "count": 737,
+        "winRate": 32.3,
+        "avgR": -0.04,
+        "expectancy": -0.04,
+        "profitFactor": 0.92
+      },
+      "highA_lowB": {
+        "count": 430,
+        "winRate": 31.6,
+        "avgR": -0.03,
+        "expectancy": -0.03,
+        "profitFactor": 0.93
+      },
+      "lowA_highB": {
+        "count": 100,
+        "winRate": 44,
+        "avgR": 0.12,
+        "expectancy": 0.12,
+        "profitFactor": 1.27
+      },
+      "lowA_lowB": {
+        "count": 50,
+        "winRate": 38,
+        "avgR": 0.04,
+        "expectancy": 0.04,
+        "profitFactor": 1.1
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "trend",
+      "factorAName": "Trend Alignment (EMA Stack)",
+      "factorB": "supportResistance",
+      "factorBName": "Support / Resistance Zones",
+      "correlation": -0.172,
+      "concordanceScore": 0.414,
+      "highA_highB": {
+        "count": 813,
+        "winRate": 33.1,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.95
+      },
+      "highA_lowB": {
+        "count": 354,
+        "winRate": 29.7,
+        "avgR": -0.07,
+        "expectancy": -0.07,
+        "profitFactor": 0.86
+      },
+      "lowA_highB": {
+        "count": 150,
+        "winRate": 42,
+        "avgR": 0.09,
+        "expectancy": 0.09,
+        "profitFactor": 1.22
+      },
+      "lowA_lowB": {
+        "count": 0,
+        "winRate": 0,
+        "avgR": 0,
+        "expectancy": 0,
+        "profitFactor": 0
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "trend",
+      "factorAName": "Trend Alignment (EMA Stack)",
+      "factorB": "liquidity",
+      "factorBName": "Liquidity Sweeps & V-Reversals",
+      "correlation": -0.175,
+      "concordanceScore": 0.413,
+      "highA_highB": {
+        "count": 674,
+        "winRate": 31.9,
+        "avgR": -0.05,
+        "expectancy": -0.05,
+        "profitFactor": 0.9
+      },
+      "highA_lowB": {
+        "count": 493,
+        "winRate": 32.3,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.95
+      },
+      "lowA_highB": {
+        "count": 117,
+        "winRate": 40.2,
+        "avgR": 0.06,
+        "expectancy": 0.06,
+        "profitFactor": 1.13
+      },
+      "lowA_lowB": {
+        "count": 33,
+        "winRate": 48.5,
+        "avgR": 0.21,
+        "expectancy": 0.21,
+        "profitFactor": 1.58
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "trend",
+      "factorAName": "Trend Alignment (EMA Stack)",
+      "factorB": "tradingSession",
+      "factorBName": "Active Trading Session Timing",
+      "correlation": -0.113,
+      "concordanceScore": 0.444,
+      "highA_highB": {
+        "count": 782,
+        "winRate": 30.2,
+        "avgR": -0.06,
+        "expectancy": -0.06,
+        "profitFactor": 0.87
+      },
+      "highA_lowB": {
+        "count": 385,
+        "winRate": 35.8,
+        "avgR": 0.01,
+        "expectancy": 0.01,
+        "profitFactor": 1.02
+      },
+      "lowA_highB": {
+        "count": 126,
+        "winRate": 48.4,
+        "avgR": 0.24,
+        "expectancy": 0.24,
+        "profitFactor": 1.67
+      },
+      "lowA_lowB": {
+        "count": 24,
+        "winRate": 8.3,
+        "avgR": -0.7,
+        "expectancy": -0.7,
+        "profitFactor": 0.07
+      },
+      "interactionSynergy": "CONFLICTING"
+    },
+    {
+      "factorA": "trend",
+      "factorAName": "Trend Alignment (EMA Stack)",
+      "factorB": "riskReward",
+      "factorBName": "Risk-to-Reward Geometry",
+      "correlation": 0,
+      "concordanceScore": 0.5,
+      "highA_highB": {
+        "count": 1167,
+        "winRate": 32,
+        "avgR": -0.04,
+        "expectancy": -0.04,
+        "profitFactor": 0.92
+      },
+      "highA_lowB": {
+        "count": 0,
+        "winRate": 0,
+        "avgR": 0,
+        "expectancy": 0,
+        "profitFactor": 0
+      },
+      "lowA_highB": {
+        "count": 150,
+        "winRate": 42,
+        "avgR": 0.09,
+        "expectancy": 0.09,
+        "profitFactor": 1.22
+      },
+      "lowA_lowB": {
+        "count": 0,
+        "winRate": 0,
+        "avgR": 0,
+        "expectancy": 0,
+        "profitFactor": 0
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "marketStructure",
+      "factorAName": "Market Structure & Swings",
+      "factorB": "momentum",
+      "factorBName": "Momentum & RSI Divergence",
+      "correlation": -0.096,
+      "concordanceScore": 0.452,
+      "highA_highB": {
+        "count": 994,
+        "winRate": 33.3,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.96
+      },
+      "highA_lowB": {
+        "count": 90,
+        "winRate": 28.9,
+        "avgR": -0.04,
+        "expectancy": -0.04,
+        "profitFactor": 0.89
+      },
+      "lowA_highB": {
+        "count": 233,
+        "winRate": 34.3,
+        "avgR": -0.04,
+        "expectancy": -0.04,
+        "profitFactor": 0.92
+      },
+      "lowA_lowB": {
+        "count": 0,
+        "winRate": 0,
+        "avgR": 0,
+        "expectancy": 0,
+        "profitFactor": 0
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "marketStructure",
+      "factorAName": "Market Structure & Swings",
+      "factorB": "volatility",
+      "factorBName": "Volatility & ATR Expansion",
+      "correlation": -0.281,
+      "concordanceScore": 0.359,
+      "highA_highB": {
+        "count": 649,
+        "winRate": 33.6,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.96
+      },
+      "highA_lowB": {
+        "count": 435,
+        "winRate": 32,
+        "avgR": -0.01,
+        "expectancy": -0.01,
+        "profitFactor": 0.97
+      },
+      "lowA_highB": {
+        "count": 188,
+        "winRate": 34,
+        "avgR": -0.03,
+        "expectancy": -0.03,
+        "profitFactor": 0.95
+      },
+      "lowA_lowB": {
+        "count": 45,
+        "winRate": 35.6,
+        "avgR": -0.1,
+        "expectancy": -0.1,
+        "profitFactor": 0.77
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "marketStructure",
+      "factorAName": "Market Structure & Swings",
+      "factorB": "supportResistance",
+      "factorBName": "Support / Resistance Zones",
+      "correlation": -0.411,
+      "concordanceScore": 0.294,
+      "highA_highB": {
+        "count": 735,
+        "winRate": 34.3,
+        "avgR": 0,
+        "expectancy": 0,
+        "profitFactor": 1
+      },
+      "highA_lowB": {
+        "count": 349,
+        "winRate": 30.1,
+        "avgR": -0.06,
+        "expectancy": -0.06,
+        "profitFactor": 0.87
+      },
+      "lowA_highB": {
+        "count": 228,
+        "winRate": 35.1,
+        "avgR": -0.03,
+        "expectancy": -0.03,
+        "profitFactor": 0.94
+      },
+      "lowA_lowB": {
+        "count": 5,
+        "winRate": 0,
+        "avgR": -0.57,
+        "expectancy": -0.57,
+        "profitFactor": 0.06
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "marketStructure",
+      "factorAName": "Market Structure & Swings",
+      "factorB": "liquidity",
+      "factorBName": "Liquidity Sweeps & V-Reversals",
+      "correlation": -0.418,
+      "concordanceScore": 0.291,
+      "highA_highB": {
+        "count": 588,
+        "winRate": 33.2,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.96
+      },
+      "highA_lowB": {
+        "count": 496,
+        "winRate": 32.7,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.96
+      },
+      "lowA_highB": {
+        "count": 203,
+        "winRate": 33,
+        "avgR": -0.07,
+        "expectancy": -0.07,
+        "profitFactor": 0.86
+      },
+      "lowA_lowB": {
+        "count": 30,
+        "winRate": 43.3,
+        "avgR": 0.16,
+        "expectancy": 0.16,
+        "profitFactor": 1.32
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "marketStructure",
+      "factorAName": "Market Structure & Swings",
+      "factorB": "tradingSession",
+      "factorBName": "Active Trading Session Timing",
+      "correlation": -0.04,
+      "concordanceScore": 0.48,
+      "highA_highB": {
+        "count": 743,
+        "winRate": 33,
+        "avgR": -0.01,
+        "expectancy": -0.01,
+        "profitFactor": 0.98
+      },
+      "highA_lowB": {
+        "count": 341,
+        "winRate": 32.8,
+        "avgR": -0.04,
+        "expectancy": -0.04,
+        "profitFactor": 0.91
+      },
+      "lowA_highB": {
+        "count": 165,
+        "winRate": 31.5,
+        "avgR": -0.07,
+        "expectancy": -0.07,
+        "profitFactor": 0.86
+      },
+      "lowA_lowB": {
+        "count": 68,
+        "winRate": 41.2,
+        "avgR": 0.03,
+        "expectancy": 0.03,
+        "profitFactor": 1.05
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "marketStructure",
+      "factorAName": "Market Structure & Swings",
+      "factorB": "riskReward",
+      "factorBName": "Risk-to-Reward Geometry",
+      "correlation": 0,
+      "concordanceScore": 0.5,
+      "highA_highB": {
+        "count": 1084,
+        "winRate": 32.9,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.96
+      },
+      "highA_lowB": {
+        "count": 0,
+        "winRate": 0,
+        "avgR": 0,
+        "expectancy": 0,
+        "profitFactor": 0
+      },
+      "lowA_highB": {
+        "count": 233,
+        "winRate": 34.3,
+        "avgR": -0.04,
+        "expectancy": -0.04,
+        "profitFactor": 0.92
+      },
+      "lowA_lowB": {
+        "count": 0,
+        "winRate": 0,
+        "avgR": 0,
+        "expectancy": 0,
+        "profitFactor": 0
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "momentum",
+      "factorAName": "Momentum & RSI Divergence",
+      "factorB": "volatility",
+      "factorBName": "Volatility & ATR Expansion",
+      "correlation": 0.115,
+      "concordanceScore": 0.558,
+      "highA_highB": {
+        "count": 823,
+        "winRate": 33.8,
+        "avgR": -0.03,
+        "expectancy": -0.03,
+        "profitFactor": 0.95
+      },
+      "highA_lowB": {
+        "count": 404,
+        "winRate": 32.9,
+        "avgR": -0.01,
+        "expectancy": -0.01,
+        "profitFactor": 0.97
+      },
+      "lowA_highB": {
+        "count": 14,
+        "winRate": 28.6,
+        "avgR": 0.06,
+        "expectancy": 0.06,
+        "profitFactor": 1.11
+      },
+      "lowA_lowB": {
+        "count": 76,
+        "winRate": 28.9,
+        "avgR": -0.06,
+        "expectancy": -0.06,
+        "profitFactor": 0.83
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "momentum",
+      "factorAName": "Momentum & RSI Divergence",
+      "factorB": "supportResistance",
+      "factorBName": "Support / Resistance Zones",
+      "correlation": -0.164,
+      "concordanceScore": 0.418,
+      "highA_highB": {
+        "count": 880,
+        "winRate": 35,
+        "avgR": 0,
+        "expectancy": 0,
+        "profitFactor": 0.99
+      },
+      "highA_lowB": {
+        "count": 347,
+        "winRate": 29.7,
+        "avgR": -0.06,
+        "expectancy": -0.06,
+        "profitFactor": 0.87
+      },
+      "lowA_highB": {
+        "count": 83,
+        "winRate": 28.9,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.93
+      },
+      "lowA_lowB": {
+        "count": 7,
+        "winRate": 28.6,
+        "avgR": -0.21,
+        "expectancy": -0.21,
+        "profitFactor": 0.43
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "momentum",
+      "factorAName": "Momentum & RSI Divergence",
+      "factorB": "liquidity",
+      "factorBName": "Liquidity Sweeps & V-Reversals",
+      "correlation": -0.034,
+      "concordanceScore": 0.483,
+      "highA_highB": {
+        "count": 758,
+        "winRate": 33.9,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.95
+      },
+      "highA_lowB": {
+        "count": 469,
+        "winRate": 32.8,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.97
+      },
+      "lowA_highB": {
+        "count": 33,
+        "winRate": 15.2,
+        "avgR": -0.22,
+        "expectancy": -0.22,
+        "profitFactor": 0.48
+      },
+      "lowA_lowB": {
+        "count": 57,
+        "winRate": 36.8,
+        "avgR": 0.07,
+        "expectancy": 0.07,
+        "profitFactor": 1.21
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "momentum",
+      "factorAName": "Momentum & RSI Divergence",
+      "factorB": "tradingSession",
+      "factorBName": "Active Trading Session Timing",
+      "correlation": -0.135,
+      "concordanceScore": 0.432,
+      "highA_highB": {
+        "count": 843,
+        "winRate": 33,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.96
+      },
+      "highA_lowB": {
+        "count": 384,
+        "winRate": 34.6,
+        "avgR": -0.03,
+        "expectancy": -0.03,
+        "profitFactor": 0.94
+      },
+      "lowA_highB": {
+        "count": 65,
+        "winRate": 29.2,
+        "avgR": -0.03,
+        "expectancy": -0.03,
+        "profitFactor": 0.92
+      },
+      "lowA_lowB": {
+        "count": 25,
+        "winRate": 28,
+        "avgR": -0.07,
+        "expectancy": -0.07,
+        "profitFactor": 0.82
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "momentum",
+      "factorAName": "Momentum & RSI Divergence",
+      "factorB": "riskReward",
+      "factorBName": "Risk-to-Reward Geometry",
+      "correlation": 0,
+      "concordanceScore": 0.5,
+      "highA_highB": {
+        "count": 1227,
+        "winRate": 33.5,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.96
+      },
+      "highA_lowB": {
+        "count": 0,
+        "winRate": 0,
+        "avgR": 0,
+        "expectancy": 0,
+        "profitFactor": 0
+      },
+      "lowA_highB": {
+        "count": 90,
+        "winRate": 28.9,
+        "avgR": -0.04,
+        "expectancy": -0.04,
+        "profitFactor": 0.89
+      },
+      "lowA_lowB": {
+        "count": 0,
+        "winRate": 0,
+        "avgR": 0,
+        "expectancy": 0,
+        "profitFactor": 0
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "volatility",
+      "factorAName": "Volatility & ATR Expansion",
+      "factorB": "supportResistance",
+      "factorBName": "Support / Resistance Zones",
+      "correlation": -0.011,
+      "concordanceScore": 0.495,
+      "highA_highB": {
+        "count": 597,
+        "winRate": 36.2,
+        "avgR": 0.02,
+        "expectancy": 0.02,
+        "profitFactor": 1.03
+      },
+      "highA_lowB": {
+        "count": 240,
+        "winRate": 27.5,
+        "avgR": -0.12,
+        "expectancy": -0.12,
+        "profitFactor": 0.78
+      },
+      "lowA_highB": {
+        "count": 366,
+        "winRate": 31.7,
+        "avgR": -0.04,
+        "expectancy": -0.04,
+        "profitFactor": 0.9
+      },
+      "lowA_lowB": {
+        "count": 114,
+        "winRate": 34.2,
+        "avgR": 0.05,
+        "expectancy": 0.05,
+        "profitFactor": 1.14
+      },
+      "interactionSynergy": "SYNERGISTIC"
+    },
+    {
+      "factorA": "volatility",
+      "factorAName": "Volatility & ATR Expansion",
+      "factorB": "liquidity",
+      "factorBName": "Liquidity Sweeps & V-Reversals",
+      "correlation": -0.028,
+      "concordanceScore": 0.486,
+      "highA_highB": {
+        "count": 500,
+        "winRate": 34.2,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.97
+      },
+      "highA_lowB": {
+        "count": 337,
+        "winRate": 32.9,
+        "avgR": -0.03,
+        "expectancy": -0.03,
+        "profitFactor": 0.94
+      },
+      "lowA_highB": {
+        "count": 291,
+        "winRate": 31.3,
+        "avgR": -0.06,
+        "expectancy": -0.06,
+        "profitFactor": 0.86
+      },
+      "lowA_lowB": {
+        "count": 189,
+        "winRate": 33.9,
+        "avgR": 0.04,
+        "expectancy": 0.04,
+        "profitFactor": 1.12
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "volatility",
+      "factorAName": "Volatility & ATR Expansion",
+      "factorB": "tradingSession",
+      "factorBName": "Active Trading Session Timing",
+      "correlation": 0.221,
+      "concordanceScore": 0.611,
+      "highA_highB": {
+        "count": 642,
+        "winRate": 33.6,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.96
+      },
+      "highA_lowB": {
+        "count": 195,
+        "winRate": 33.8,
+        "avgR": -0.04,
+        "expectancy": -0.04,
+        "profitFactor": 0.92
+      },
+      "lowA_highB": {
+        "count": 266,
+        "winRate": 30.5,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.95
+      },
+      "lowA_lowB": {
+        "count": 214,
+        "winRate": 34.6,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.95
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "volatility",
+      "factorAName": "Volatility & ATR Expansion",
+      "factorB": "riskReward",
+      "factorBName": "Risk-to-Reward Geometry",
+      "correlation": 0,
+      "concordanceScore": 0.5,
+      "highA_highB": {
+        "count": 837,
+        "winRate": 33.7,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.95
+      },
+      "highA_lowB": {
+        "count": 0,
+        "winRate": 0,
+        "avgR": 0,
+        "expectancy": 0,
+        "profitFactor": 0
+      },
+      "lowA_highB": {
+        "count": 480,
+        "winRate": 32.3,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.95
+      },
+      "lowA_lowB": {
+        "count": 0,
+        "winRate": 0,
+        "avgR": 0,
+        "expectancy": 0,
+        "profitFactor": 0
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "supportResistance",
+      "factorAName": "Support / Resistance Zones",
+      "factorB": "liquidity",
+      "factorBName": "Liquidity Sweeps & V-Reversals",
+      "correlation": 0.158,
+      "concordanceScore": 0.579,
+      "highA_highB": {
+        "count": 606,
+        "winRate": 33.5,
+        "avgR": -0.04,
+        "expectancy": -0.04,
+        "profitFactor": 0.92
+      },
+      "highA_lowB": {
+        "count": 357,
+        "winRate": 36.1,
+        "avgR": 0.05,
+        "expectancy": 0.05,
+        "profitFactor": 1.11
+      },
+      "lowA_highB": {
+        "count": 185,
+        "winRate": 31.9,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.96
+      },
+      "lowA_lowB": {
+        "count": 169,
+        "winRate": 27.2,
+        "avgR": -0.12,
+        "expectancy": -0.12,
+        "profitFactor": 0.75
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "supportResistance",
+      "factorAName": "Support / Resistance Zones",
+      "factorB": "tradingSession",
+      "factorBName": "Active Trading Session Timing",
+      "correlation": -0.109,
+      "concordanceScore": 0.445,
+      "highA_highB": {
+        "count": 642,
+        "winRate": 35.2,
+        "avgR": 0.03,
+        "expectancy": 0.03,
+        "profitFactor": 1.06
+      },
+      "highA_lowB": {
+        "count": 321,
+        "winRate": 33,
+        "avgR": -0.07,
+        "expectancy": -0.07,
+        "profitFactor": 0.86
+      },
+      "lowA_highB": {
+        "count": 266,
+        "winRate": 26.7,
+        "avgR": -0.12,
+        "expectancy": -0.12,
+        "profitFactor": 0.75
+      },
+      "lowA_lowB": {
+        "count": 88,
+        "winRate": 38.6,
+        "avgR": 0.1,
+        "expectancy": 0.1,
+        "profitFactor": 1.24
+      },
+      "interactionSynergy": "SYNERGISTIC"
+    },
+    {
+      "factorA": "supportResistance",
+      "factorAName": "Support / Resistance Zones",
+      "factorB": "riskReward",
+      "factorBName": "Risk-to-Reward Geometry",
+      "correlation": 0,
+      "concordanceScore": 0.5,
+      "highA_highB": {
+        "count": 963,
+        "winRate": 34.5,
+        "avgR": -0.01,
+        "expectancy": -0.01,
+        "profitFactor": 0.99
+      },
+      "highA_lowB": {
+        "count": 0,
+        "winRate": 0,
+        "avgR": 0,
+        "expectancy": 0,
+        "profitFactor": 0
+      },
+      "lowA_highB": {
+        "count": 354,
+        "winRate": 29.7,
+        "avgR": -0.07,
+        "expectancy": -0.07,
+        "profitFactor": 0.86
+      },
+      "lowA_lowB": {
+        "count": 0,
+        "winRate": 0,
+        "avgR": 0,
+        "expectancy": 0,
+        "profitFactor": 0
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "liquidity",
+      "factorAName": "Liquidity Sweeps & V-Reversals",
+      "factorB": "tradingSession",
+      "factorBName": "Active Trading Session Timing",
+      "correlation": -0.065,
+      "concordanceScore": 0.467,
+      "highA_highB": {
+        "count": 528,
+        "winRate": 32.8,
+        "avgR": -0.01,
+        "expectancy": -0.01,
+        "profitFactor": 0.97
+      },
+      "highA_lowB": {
+        "count": 263,
+        "winRate": 33.8,
+        "avgR": -0.07,
+        "expectancy": -0.07,
+        "profitFactor": 0.85
+      },
+      "lowA_highB": {
+        "count": 380,
+        "winRate": 32.6,
+        "avgR": -0.03,
+        "expectancy": -0.03,
+        "profitFactor": 0.95
+      },
+      "lowA_lowB": {
+        "count": 146,
+        "winRate": 34.9,
+        "avgR": 0.04,
+        "expectancy": 0.04,
+        "profitFactor": 1.09
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "liquidity",
+      "factorAName": "Liquidity Sweeps & V-Reversals",
+      "factorB": "riskReward",
+      "factorBName": "Risk-to-Reward Geometry",
+      "correlation": 0,
+      "concordanceScore": 0.5,
+      "highA_highB": {
+        "count": 791,
+        "winRate": 33.1,
+        "avgR": -0.03,
+        "expectancy": -0.03,
+        "profitFactor": 0.93
+      },
+      "highA_lowB": {
+        "count": 0,
+        "winRate": 0,
+        "avgR": 0,
+        "expectancy": 0,
+        "profitFactor": 0
+      },
+      "lowA_highB": {
+        "count": 526,
+        "winRate": 33.3,
+        "avgR": -0.01,
+        "expectancy": -0.01,
+        "profitFactor": 0.99
+      },
+      "lowA_lowB": {
+        "count": 0,
+        "winRate": 0,
+        "avgR": 0,
+        "expectancy": 0,
+        "profitFactor": 0
+      },
+      "interactionSynergy": "INDEPENDENT"
+    },
+    {
+      "factorA": "tradingSession",
+      "factorAName": "Active Trading Session Timing",
+      "factorB": "riskReward",
+      "factorBName": "Risk-to-Reward Geometry",
+      "correlation": 0,
+      "concordanceScore": 0.5,
+      "highA_highB": {
+        "count": 908,
+        "winRate": 32.7,
+        "avgR": -0.02,
+        "expectancy": -0.02,
+        "profitFactor": 0.96
+      },
+      "highA_lowB": {
+        "count": 0,
+        "winRate": 0,
+        "avgR": 0,
+        "expectancy": 0,
+        "profitFactor": 0
+      },
+      "lowA_highB": {
+        "count": 409,
+        "winRate": 34.2,
+        "avgR": -0.03,
+        "expectancy": -0.03,
+        "profitFactor": 0.93
+      },
+      "lowA_lowB": {
+        "count": 0,
+        "winRate": 0,
+        "avgR": 0,
+        "expectancy": 0,
+        "profitFactor": 0
+      },
+      "interactionSynergy": "INDEPENDENT"
+    }
+  ],
+  "executiveSummary": {
+    "strongPredictiveFactors": [
+      "Market Structure & Swings",
+      "Support / Resistance Zones",
+      "Risk-to-Reward Geometry"
+    ],
+    "neutralNoiseFactors": [
+      "Trend Alignment (EMA Stack)",
+      "Momentum & RSI Divergence",
+      "Volatility & ATR Expansion",
+      "Liquidity Sweeps & V-Reversals",
+      "Active Trading Session Timing"
+    ],
+    "harmfulDragFactors": [],
+    "keyInsights": [
+      "Ablation and rank-correlation tests indicate that Market Structure & Swings, Support / Resistance Zones, Risk-to-Reward Geometry exhibits statistically significant positive correlation with realized R.",
+      "Factors with negative or contradictory monotonicity contribute frictional drag and false-positive setup triggers.",
+      "Multi-factor combination without calibration results in trade-frequency bloat (2,189 trades across 10 years)."
+    ]
+  }
+}
